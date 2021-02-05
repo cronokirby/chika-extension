@@ -11,19 +11,14 @@
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.chika",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.chika",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.chika",
-					"match": "\\\\."
+					"name": "keyword.control.chika",
+					"match": "\\b(if|else|return)\\b"
+				},
+				{
+					"name": "keyword.function.chika",
+					"match": "\\b(fn)\\b"
 				}
 			]
 		}
