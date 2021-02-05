@@ -37,7 +37,7 @@
 			]
 		},
 		"type": {
-			"match": "\\b([[:upper:]][a-zA-Z0-9]*)\\b",
+			"match": "\\b([[:upper:]]([[:alnum:]]|_)*)\\b",
 			"name": "entity.name.type.chika"
 		}
 	},
