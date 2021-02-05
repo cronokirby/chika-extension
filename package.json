@@ -1,0 +1,25 @@
+{
+    "name": "chika",
+    "displayName": "chika",
+    "description": "Language support for chika",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "chika",
+            "aliases": ["chika", "chika"],
+            "extensions": [".chika"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "chika",
+            "scopeName": "source.chika",
+            "path": "./syntaxes/chika.tmLanguage.json"
+        }]
+    }
+}
