@@ -6,10 +6,24 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#expression"
+		},
+		{
+			"include": "#type"
 		}
 	],
 	"repository": {
+		"expression": {
+			"patterns": [
+				{
+					"include": "#number"
+				}
+			]
+		},
+		"number": {
+			"match": "\\b([0-9]+)\\b",
+			"name": "constant.numeric.chika"
+		},
 		"keywords": {
 			"patterns": [
 				{
@@ -17,10 +31,14 @@
 					"match": "\\b(if|else|return)\\b"
 				},
 				{
-					"name": "keyword.function.chika",
-					"match": "\\b(fn)\\b"
+					"name": "keyword.structure.chika",
+					"match": "\\b(fn|var)\\b"
 				}
 			]
+		},
+		"type": {
+			"match": "\\b([[:upper:]][a-zA-Z0-9]*)\\b",
+			"name": "entity.name.type.chika"
 		}
 	},
 	"scopeName": "source.chika"
