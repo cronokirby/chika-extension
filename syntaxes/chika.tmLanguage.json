@@ -33,6 +33,10 @@
 				{
 					"name": "keyword.structure.chika",
 					"match": "\\b(fn|var)\\b"
+				},
+				{
+					"match": "[\\+\\-\\*\/=<>|:&]+",
+					"name": "keyword.operator.chika"
 				}
 			]
 		},
