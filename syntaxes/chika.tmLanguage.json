@@ -10,15 +10,45 @@
 		},
 		{
 			"include": "#type"
+		},
+		{
+			"include": "#function-definition"
 		}
 	],
 	"repository": {
+		"function-definition": {
+			"begin": "\\bfn\\b",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.structure.chika"
+				}
+			},
+			"end": "(?<=\\()",
+			"patterns": [
+				{
+					"begin": "([[:lower:]]([[:alnum:]]|_)*)",
+					"beginCaptures": {
+						"0": {
+							"name": "entity.name.function.chika"
+						}
+					},
+					"end": "(?<=\\()"
+				}
+			]
+		},
 		"expression": {
 			"patterns": [
 				{
 					"include": "#number"
+				},
+				{
+					"include": "#function-call"
 				}
 			]
+		},
+		"function-call": {
+			"match": "\\b([[:lower:]]([[:alnum:]]|_)*)(?=\\()",
+			"name": "entity.name.function.chika"
 		},
 		"number": {
 			"match": "\\b([0-9]+)\\b",
@@ -32,7 +62,7 @@
 				},
 				{
 					"name": "keyword.structure.chika",
-					"match": "\\b(fn|var)\\b"
+					"match": "\\b(var)\\b"
 				},
 				{
 					"match": "[\\+\\-\\*\/=<>|:&]+",
