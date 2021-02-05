@@ -2,13 +2,15 @@
     "name": "chika",
     "displayName": "chika",
     "description": "Language support for chika",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
-        "vscode": "^1.53.0"
+        "vscode": "^1.52.1"
     },
     "categories": [
         "Programming Languages"
     ],
+    "publisher": "cronokirby",
+    "repository": "https://github.com/cronokirby/chika-extension",
     "contributes": {
         "languages": [{
             "id": "chika",
