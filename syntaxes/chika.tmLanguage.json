@@ -13,6 +13,9 @@
 		},
 		{
 			"include": "#function-definition"
+		},
+		{
+			"include": "#comment"
 		}
 	],
 	"repository": {
@@ -65,7 +68,11 @@
 					"match": "\\b(var)\\b"
 				},
 				{
-					"match": "[\\+\\-\\*\/=<>|:&]+",
+					"match": "[\\+\\-\\*=<>|:&]+",
+					"name": "keyword.operator.chika"
+				},
+				{
+					"match": "/(?!/)",
 					"name": "keyword.operator.chika"
 				}
 			]
@@ -73,6 +80,14 @@
 		"type": {
 			"match": "\\b([[:upper:]]([[:alnum:]]|_)*)\\b",
 			"name": "entity.name.type.chika"
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.chika",
+					"match": "//.*$"
+				}
+			]
 		}
 	},
 	"scopeName": "source.chika"
